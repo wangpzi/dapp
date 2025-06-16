@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+html {
+  transition: font-size 0.3s ease-in-out;
+}
+:root {
+  --fereground: #333;
+  --background: #f0f0f0;
+}
+
+body {
+  color: var(--fereground);
+  background: var(--background);
+  /* body:(ctx) => {
+    console.log(111)
+  } */
+}
+
+h1 {
+  color: yellowgreen;
+}
