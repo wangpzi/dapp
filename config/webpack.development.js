@@ -16,7 +16,7 @@ module.exports = {
     port,
   },
   output: {
-    publicPath: '/',
+    publicPath: './',
     // 如果是通过laoder编译的 放到script文件夹里的filename
     filename: 'srcipts/[name].build.js',
     // 如果是通过'asset/resource' 编译的
