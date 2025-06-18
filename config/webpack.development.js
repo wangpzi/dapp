@@ -3,7 +3,7 @@ const { resolve, join } = require("path");
 const port = 3003;
 const FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugin');
 const notifier = require('node-notifier')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   devServer: {
@@ -16,7 +16,7 @@ module.exports = {
     port,
   },
   output: {
-    publicPath: './',
+    publicPath: '/',
     // 如果是通过laoder编译的 放到script文件夹里的filename
     filename: 'srcipts/[name].build.js',
     // 如果是通过'asset/resource' 编译的
@@ -53,6 +53,6 @@ module.exports = {
       },
       clearConsole: true,
     }),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ],
 };

@@ -6,11 +6,13 @@
     "dev": "webpack --mode development",
     "server": "webpack server --mode development",
     "build": "webpack --mode production",
-    "test": "echo \"No tests specified, but allowing commit\"",
+    "test": "jest --collectCoverage --reporters default jest-stare",
     "test:uidiff": "backstop test",
+    "test:e2e": "cypress open",
     "lint:fix": "tsc --noEmit & eslint ./src --ext .ts,.tsx,.js --fix",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:ui": "majestic"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,9 @@
   "devDependencies": {
     "@soda/friendly-errors-webpack-plugin": "^1.8.1",
     "@swc/core": "^1.12.0",
+    "@swc/jest": "^0.2.38",
     "@tailwindcss/postcss": "^4.1.10",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "7.0.0",
@@ -28,6 +32,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
+    "cypress": "^14.5.0",
     "eslint": "8.57.1",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^10.1.5",
@@ -39,7 +44,9 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
-    "jest": "^30.0.0",
+    "jest": "29.7.0",
+    "jest-stare": "^2.5.2",
+    "majestic": "^1.8.1",
     "mini-css-extract-plugin": "^2.9.2",
     "node-notifier": "^10.0.1",
     "postcss": "^8.5.5",
@@ -59,7 +66,11 @@
   },
   "dependencies": {
     "@welldone-software/why-did-you-render": "^10.0.1",
+    "ethers": "^6.14.4",
+    "immer": "^10.1.1",
+    "lucide-react": "^0.516.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
   }
 }
