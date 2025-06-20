@@ -14,6 +14,12 @@ module.exports = {
     },
     hot: true,
     port,
+    proxy: [{
+      context: ['/api'],
+      target: 'http://localhost:8081',
+      changeOrigin: true,
+      // pathRewrite: { '^/api': '' }, // 如果后端接口不包含 /api 前缀，则需要重写路径
+    }]
   },
   output: {
     publicPath: '/',

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdapp=self.webpackChunkdapp||[]).push([[959],{959:(e,s,a)=>{a.r(s),a.d(s,{default:()=>c});var p=a(420);const c=()=>(0,p.jsx)(p.Fragment,{children:(0,p.jsx)("h1",{children:"Test"})})}}]);
